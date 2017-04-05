@@ -29,7 +29,7 @@ var server = {
 		app.set('view engine', 'jade');
 		app.set("view options", { layout: false });
 
-		app.set('port', process.env.PORT || 8081);
+		app.set('port', process.env.PORT || config.port || 8081);
 
 		// bodyParser should be above methodOverride
 		app.use(bodyParser.urlencoded({

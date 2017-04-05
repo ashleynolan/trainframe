@@ -1,4 +1,4 @@
-
+﻿
 var path = require('path'),
 	rootPath = path.normalize(__dirname + '/..'),
 	config,
@@ -6,57 +6,47 @@ var path = require('path'),
 
 var sharedConfig = {
 	root: rootPath,
-	db : {
-		path: {}
+	trainKeys: {
+		apiToken: process.env.NRT_TOKEN
 	}
 };
 
-config = {
+module.exports = {
 	local: {
-		mode:	'local',
-		port:	3001,
+		mode: 'local',
+		clientURL: 'http://localhost:5000',
+		port: 3002,
 		app: {
-			name: 'Node Basic Setup - Local'
+			name: 'TrainFrame - local'
 		},
-		url:	'',
-		global:	sharedConfig
+		global: sharedConfig
 	},
 
-	development: {
-		mode:	'dev',
-		port:	3001,
+	dev: {
+		mode: 'development',
+		clientURL: 'http://localhost:3002',
+		port: 3002,
 		app: {
-			name: 'Node Basic Setup - Dev'
+			name: 'TrainFrame - Dev'
 		},
-		global:	sharedConfig
+		global: sharedConfig
 	},
 
-	staging: {
-		mode:	'staging',
-		port:	3001,
+	prod: {
+		mode: 'production',
+		clientURL: 'https://trainframe.herokuapp.com',
+		port: 3002,
 		app: {
-			name: 'Node Basic Setup - Staging'
+			name: 'TrainFrame - Prod'
 		},
-		global:	sharedConfig
-	},
+		global: sharedConfig
 
-	production: {
-		mode:	'prod',
-		port:	3001,
-		app: {
-			name: 'Node Basic Setup - Production'
-		},
-		global:	sharedConfig
 	},
 
 	hosts: [
 		{
-			domain: 'basic-setup.local',
+			domain: 'trainframe.local',
 			target: ['localhost:3001']
 		}
 	]
 };
-
-
-// Export config
-module.exports = config;
