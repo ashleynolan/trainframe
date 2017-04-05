@@ -33,11 +33,11 @@ var Sockets = {
 				tableHTML = ''
 
 			for (time in times.trainServices) {
-				tableHTML += `<tr>
-				<td>${times.trainServices[time].std}</td>
-				<td>${times.trainServices[time].etd}</td>
-				<td>${times.trainServices[time].platform}</td>
-				<td>${times.trainServices[time].operator}</td>`;
+				tableHTML += '<tr>' +
+				'<td>' + times.trainServices[time].std + '</td>' +
+				'<td>' + times.trainServices[time].etd + '</td>' +
+				'<td>' + times.trainServices[time].platform + '</td>' +
+				'<td>' + times.trainServices[time].operator + '</td></tr>';
 			}
 			timetable.innerHTML = tableHTML;
 		}
