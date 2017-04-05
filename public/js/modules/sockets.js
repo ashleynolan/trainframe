@@ -27,7 +27,19 @@ var Sockets = {
 			Sockets.socket.on('traintimes', this.onTimesReceived);
 		},
 		onTimesReceived : function (times) {
-			log('times received', times);
+			// log('times received', times);
+
+			var timetable = document.querySelector('.trainTimetable'),
+				tableHTML = ''
+
+			for (time in times.trainServices) {
+				tableHTML += `<tr>
+				<td>${times.trainServices[time].std}</td>
+				<td>${times.trainServices[time].etd}</td>
+				<td>${times.trainServices[time].platform}</td>
+				<td>${times.trainServices[time].operator}</td>`;
+			}
+			timetable.innerHTML = tableHTML;
 		}
 	}
 };

@@ -24,19 +24,19 @@ function init (app, config) {
 	});
 
 
-	// //  ===============================
-	// //  === SOCKET CONNECTION SETUP ===
-	// //  ===============================
-	var socketServer = require('./server/socketServer')(app, server, config);
-
 	var fatController = require('core/server/trainApiController');
 	fatController.init(socketServer, config);
+
+	//  ===============================
+	//  === SOCKET CONNECTION SETUP ===
+	//  ===============================
+	var socketServer = require('./server/socketServer')(app, server, config, fatController);
+
 
 	//  ================================
 	//  === APPLICATION ROUTES SETUP ===
 	//  ================================
 	require('core/server/routes')(app);
-
 }
 
 

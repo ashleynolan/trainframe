@@ -2,7 +2,7 @@
 
 
 var SocketServer = {
-	init : function (app, server, config) {
+	init : function (app, server, config, fatController) {
 
 		//Start a Socket.IO listen
 		var socketServer = io.listen(server);
@@ -17,7 +17,7 @@ var SocketServer = {
 			console.log('trainframe.js: New connection logged');
 
 			//needs to emit a state from our twitter controller
-			//socket.emit('data', twitterController.getState);
+			fatController.getTimes(socket);
 		});
 
 
