@@ -2148,13 +2148,6 @@ body {
 
 .page-header-title {
   margin-bottom: 10px;
-  padding: 10px;
-  background: #2980b9;
-  color: #fff;
-}
-
-.page-content {
-  border-bottom: 1px solid #333;
 }
 
 .page-footer {

@@ -15,7 +15,6 @@ module.exports = function (app) {
 // ======= HOMEPAGE =========
 	app.get('/', function(req, res) {
 		res.render('index', {
-			title : 'Basic Node Setup example'
 		});
 	});
 

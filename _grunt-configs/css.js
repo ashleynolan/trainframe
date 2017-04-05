@@ -1,4 +1,4 @@
-module.exports.tasks = {
+﻿module.exports.tasks = {
 
 	/**
 	 * Sass compilation using grunt-sass

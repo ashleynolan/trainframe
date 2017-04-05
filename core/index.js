@@ -16,7 +16,7 @@ function init (app, config) {
 	var server = http.createServer(app);
 
 	//Create the server
-	server.listen(app.get('port'), function(){
+	server.listen(app.get('port'), function() {
 		console.log('app.js: Express server listening on port ' + app.get('port'));
 	});
 	server.on('close', function(socket) {
@@ -27,9 +27,10 @@ function init (app, config) {
 	// //  ===============================
 	// //  === SOCKET CONNECTION SETUP ===
 	// //  ===============================
-	// var socketServer = require('./server/socketServer')(app, server, config);
+	var socketServer = require('./server/socketServer')(app, server, config);
 
-	require('core/server/trainApiController');
+	var fatController = require('core/server/trainApiController');
+	fatController.init(socketServer, config);
 
 	//  ================================
 	//  === APPLICATION ROUTES SETUP ===

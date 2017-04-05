@@ -1,8 +1,16 @@
-var rail = require('national-rail-darwin');
-var railApi = new rail('da13a8a6-b22f-4dd7-b6f5-4f1656223ae6');
+﻿var rail = require('national-rail-darwin');
 
-railApi.getDepartureBoardWithDetails('BRI', {filter:'STJ'}, function(err, result) {
-	console.log(result);
-});
+var TrainApiController = {
+	railApi: new rail('da13a8a6-b22f-4dd7-b6f5-4f1656223ae6'),
 
-module.exports = {};
+	init: function (socketServer, config) {
+
+		this.railApi.getDepartureBoardWithDetails('BRI', {filter:'STJ'}, function(err, result) {
+			console.log(result);
+			socketServer.emit('traintimes', result);
+		});
+
+	}
+};
+
+module.exports = TrainApiController;

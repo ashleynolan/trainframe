@@ -1,18 +1,24 @@
-var TMW = window.TMW || {};
+﻿// --------------------------------------------- //
+// DEFINE GLOBAL LIBS                            //
+// --------------------------------------------- //
+// Uncomment the line below to expose jQuery as a global object to the usual places
+// window.jQuery = window.$ = require('./libs/jquery/jquery-1.10.2.js');
 
-TMW.Base = {
+// force compilation of global libs that don't return a value.
+require("./helpers/log");
+require("./helpers/shims");
 
-	state : {
-		pageType : null
-	},
+var Sockets = require('./modules/sockets');
 
 
+//initialise KO object
+var KO = {};
+
+KO.Config = {
 	init : function () {
-
-
+		Sockets.init();
 	}
-
 };
 
 
-TMW.Base.init();
+KO.Config.init();

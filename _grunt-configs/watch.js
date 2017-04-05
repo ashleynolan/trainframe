@@ -15,14 +15,17 @@
 		},
 
 		js: {
-			files: ['<%=config.js.fileList%>'],
-			tasks: ['uglify']
+			files: [
+				'<%=config.js.jsDir%>/**/*.js',
+				'!<%=config.js.distDir%>/**/*.js'
+			],
+			tasks: ['browserify:dev']
 		},
 
 		livereload: {
 			options: { livereload: true },
 			files: [
-				'app/views/**/*.pug',
+				'core/client/views/**/*.jade',
 				'<%=config.css.distDir%>/*.css'
 			]
 		},
