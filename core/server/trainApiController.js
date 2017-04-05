@@ -4,13 +4,15 @@ var TrainApiController = {
 	railApi: new rail('da13a8a6-b22f-4dd7-b6f5-4f1656223ae6'),
 	socket: null,
 
-	init : function (socketServer, config) {
-
-		this.socket = socketServer;
+	init : function (config) {
 
 		// set emit time to every 30 seconds
 		setInterval(this.getTimes, 60000);
 
+	},
+
+	setSocketServer : function (socketServer) {
+		this.socket = socketServer;
 	},
 
 	getTimes: function (socket) {

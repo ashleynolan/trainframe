@@ -7,6 +7,8 @@ var SocketServer = {
 		//Start a Socket.IO listen
 		var socketServer = io.listen(server);
 
+		fatController.setSocketServer(socketServer);
+
 		//  ==================
 		//  === ON CONNECT ===
 		//  ==================

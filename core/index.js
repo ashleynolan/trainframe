@@ -25,7 +25,7 @@ function init (app, config) {
 
 
 	var fatController = require('core/server/trainApiController');
-	fatController.init(socketServer, config);
+	fatController.init(config);
 
 	//  ===============================
 	//  === SOCKET CONNECTION SETUP ===

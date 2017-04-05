@@ -4,6 +4,7 @@
 
 // dependencies for this module go here
 // var UI = require('./ui');
+var moment = require('moment');
 
 var Sockets = {
 	socket : null,
@@ -30,7 +31,8 @@ var Sockets = {
 			// log('times received', times);
 
 			var timetable = document.querySelector('.trainTimetable'),
-				tableHTML = ''
+				tableHTML = '';
+				lastUpdated = document.querySelector('.lastUpdated');
 
 			for (time in times.trainServices) {
 				tableHTML += '<tr>' +
@@ -40,6 +42,8 @@ var Sockets = {
 				'<td>' + times.trainServices[time].operator + '</td></tr>';
 			}
 			timetable.innerHTML = tableHTML;
+
+			lastUpdated.innerHTML = ' ' + moment().format("h:mma");
 		}
 	}
 };

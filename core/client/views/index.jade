@@ -1,7 +1,10 @@
 ﻿extends layouts/default
 
 block content
-	p Most recent trains:
+	p
+		| Next trains from BRI to STJ (last updated at
+		span.lastUpdated
+		| ):
 	table.table.table--bordered
 		thead
 			th Time
