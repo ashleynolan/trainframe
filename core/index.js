@@ -29,6 +29,7 @@ function init (app, config) {
 	// //  ===============================
 	// var socketServer = require('./server/socketServer')(app, server, config);
 
+	require('core/server/trainApiController');
 
 	//  ================================
 	//  === APPLICATION ROUTES SETUP ===
