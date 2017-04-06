@@ -31,11 +31,12 @@ var TrainApiController = {
 	},
 
 	getTimes: function (from, to) {
-
-		console.log(from, to);
-		TrainApiController.railApi.getDepartureBoardWithDetails(TrainApiController.getStationCode(from), { filter: TrainApiController.getStationCode(to) }, function (err, result) {
-			return TrainApiController.firstTime(result)
-		});
+		return new Promise(function(resolve, reject) {
+			console.log(from, to);
+			TrainApiController.railApi.getDepartureBoardWithDetails(TrainApiController.getStationCode(from), { filter: TrainApiController.getStationCode(to) }, function (err, result) {
+				resolve(TrainApiController.firstTime(result));
+			});
+		})
 	},
 
 	firstTime: function(result) {

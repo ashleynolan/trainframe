@@ -8,9 +8,11 @@ var controller = {
 			requestIntent = request.intent.name;
 			requestSlots = request.intent.slots;
 
-		var result = trainApi.getTimes(controller.getSlotValue(requestSlots, 'stationfromslot'), controller.getSlotValue(requestSlots, 'stationtoslot'));
-
-		return alexaResponse.say('The next train is at ' + result).build(); 
+		trainApi.getTimes(controller.getSlotValue(requestSlots, 'stationfromslot'), controller.getSlotValue(requestSlots, 'stationtoslot'))
+		.then(function(response) {
+			console.log(response);
+			return alexaResponse.say('The next train is at ' + response).build(); 
+		})	
 	},
 
 	getSlotValue: function (slots, slotID) {
