@@ -31,20 +31,29 @@ var TrainApiController = {
 	},
 
 	getTimes: function (from, to) {
-		return new Promise(function(resolve, reject) {
+		return new Promise(function (resolve, reject) {
 			console.log(from, to);
-			TrainApiController.railApi.getDepartureBoardWithDetails(TrainApiController.getStationCode(from), { filter: TrainApiController.getStationCode(to) }, function (err, result) {
-				resolve(TrainApiController.firstTime(result));
-			});
+			var fromCode = TrainApiController.getStationCode(from);
+			var toCode = TrainApiController.getStationCode(to);
+			console.log(toCode);
+			if (fromCode === undefined || toCode === undefined) {
+				reject();
+			} else {
+				TrainApiController.railApi.getDepartureBoardWithDetails(fromCode, { filter: toCode }, function (err, result) {
+					console.log(result);
+					resolve(TrainApiController.firstTime(result));
+				});
+			}
 		})
 	},
 
-	firstTime: function(result) {
+	firstTime: function (result) {
 		return result.trainServices[0].std;
 	},
 
-	getStationCode: function(station) {
-		switch (station) {
+	getStationCode: function (station) {
+		console.log(station.toLowerCase());
+		switch (station.toLowerCase()) {
 			case 'bristol temple meads':
 			case 'temple meads':
 				return 'BRI';
@@ -52,7 +61,9 @@ var TrainApiController = {
 			case 'severn tunnel':
 				return 'STJ';
 			case 'newport':
-				return 'NWP';	
+				return 'NWP';
+			default:
+				return;
 		}
 	}
 };
