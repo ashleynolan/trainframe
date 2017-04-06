@@ -18,7 +18,7 @@ module.exports = function (app) {
 		});
 	});
 
-	app.get('/api', function(req, res) {
+	app.post('/api', function(req, res) {
 		res.json(alexaApi.RespondTo());
 	});
 
