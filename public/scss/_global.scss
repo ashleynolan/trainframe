@@ -23,3 +23,12 @@ body {
 	.page-header-title {
 		margin-bottom: 10px;
 	}
+
+.trainTimetable {
+	margin-top: 20px;
+
+	th:nth-last-child(-n+3),
+	td:nth-last-child(-n+3) {
+		text-align: center;
+	}
+}

@@ -1,14 +1,16 @@
 ﻿extends layouts/default
 
 block content
-	p
-		| Next trains from BRI to STJ (last updated at
-		span.lastUpdated
-		| ):
-	table.table
+	p.l-mb0
+		| Next trains from BRI to STJ
+	p.l-mb0
+		small
+			| last updated at
+			span.lastUpdated
+	table.table.trainTimetable
 		thead
-			th Time
-			th Estimated
-			th Platform
 			th Operator
-		tbody.trainTimetable
+			th Platform
+			th Estimated
+			th Time
+		tbody.trainTimetable-contents

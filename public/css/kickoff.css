@@ -277,20 +277,20 @@ textarea {
   font-style: normal;
 }
 html {
-  font-size: 18px;
+  font-size: 22px;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
           text-size-adjust: 100%;
 }
-@media screen and (min-width: 38.4em) {
+@media screen and (min-width: 32em) {
   html {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 
 body {
   font-family: "bpdotssquareslight", Helvetica, Arial, sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   font-size: 1rem;
   line-height: 1.4;
   color: #f1d90f;
@@ -305,10 +305,10 @@ body {
  */
 p {
   font-family: "bpdotssquareslight", Helvetica, Arial, sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   font-size: 1rem;
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 34px;
 }
 
 /**
@@ -326,24 +326,24 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 }
 
 h1, .h1, .alpha {
-  font-size: 39.0625px;
+  font-size: 46.875px;
   font-size: 1.953125rem;
-  margin-top: 28px;
-  margin-bottom: 56px;
+  margin-top: 34px;
+  margin-bottom: 68px;
 }
 
 h2, .h2, .beta {
-  font-size: 31.25px;
+  font-size: 37.5px;
   font-size: 1.5625rem;
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 34px;
 }
 
 h3, .h3, .gamma {
-  font-size: 25px;
+  font-size: 30px;
   font-size: 1.25rem;
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 34px;
 }
 
 h4, .h4, .delta,
@@ -351,12 +351,12 @@ h5, .h5, .epsilon,
 h6, .h6, .zeta {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 19.2px;
   font-size: 0.8rem;
 }
 
 h4, .h4, .delta {
-  font-size: 20px;
+  font-size: 24px;
   font-size: 1rem;
 }
 
@@ -368,7 +368,7 @@ h6, .h6, .zeta {
 * + h2, * + .h2, * + .beta,
 * + h3, * + .h3, * + .gamma,
 * + h4, * + .h4, * + .delta {
-  margin-top: 28px;
+  margin-top: 34px;
 }
 
 small {
@@ -406,12 +406,12 @@ ol {
 
 ul, ol {
   padding: 0;
-  margin: 0 0 28px 28px;
+  margin: 0 0 34px 34px;
 }
 ul ul,
 ul ol, ol ul,
 ol ol {
-  margin-left: 56px;
+  margin-left: 68px;
 }
 ul ul, ol ul {
   list-style-type: circle;
@@ -446,7 +446,7 @@ nav ul, nav ol {
  * Definition lists
  */
 dl {
-  margin-bottom: 28px;
+  margin-bottom: 34px;
 }
 
 dt {
@@ -454,7 +454,7 @@ dt {
 }
 
 dd {
-  margin-left: 28px;
+  margin-left: 34px;
 }
 
 .dl-horizontal:after {
@@ -479,7 +479,7 @@ dd {
  * Miscellaneous
  */
 hr {
-  margin: 28px 0;
+  margin: 34px 0;
   border: 0;
   border-top: 1px solid #b3b3b3;
   border-bottom: 1px solid #fff;
@@ -503,12 +503,12 @@ abbr[title] {
  */
 blockquote {
   padding-left: 10px;
-  margin: 28px;
+  margin: 34px;
   border-left: 4px solid #cccccc;
 }
 blockquote p {
   margin-bottom: 0;
-  font-size: 20px;
+  font-size: 24px;
   font-size: 1rem;
   font-weight: 300;
 }
@@ -528,7 +528,7 @@ blockquote:after {
 
 address {
   display: block;
-  margin-bottom: 28px;
+  margin-bottom: 34px;
   font-style: normal;
 }
 
@@ -696,7 +696,7 @@ samp {
 }
 
 .btn--large {
-  font-size: 25px;
+  font-size: 30px;
   font-size: 1.25rem;
   line-height: 3;
   height: 3em;
@@ -706,7 +706,7 @@ samp {
 }
 
 .btn--small {
-  font-size: 16px;
+  font-size: 19.2px;
   font-size: 0.8rem;
   line-height: 1.5;
   height: 1.5em;
@@ -859,7 +859,7 @@ input[type="button"].btn--block {
 .g-col {
   padding: 10px;
 }
-@media screen and (min-width: 38.4em) {
+@media screen and (min-width: 32em) {
   .g-col {
     float: left;
     min-height: 1px;
@@ -880,7 +880,7 @@ input[type="button"].btn--block {
   }
 }
 
-@media screen and (min-width: 38.4em) {
+@media screen and (min-width: 32em) {
   .g-span1 {
     width: 6.42361111%;
   }
@@ -1001,7 +1001,7 @@ input[type="button"].btn--block {
   	</div>
  */
 .form {
-  margin: 0 0 28px;
+  margin: 0 0 34px;
 }
 
 .form-fieldset {
@@ -1014,8 +1014,8 @@ input[type="button"].btn--block {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 28px;
-  font-size: 25px;
+  margin-bottom: 34px;
+  font-size: 30px;
   font-size: 1.25rem;
   line-height: 1.4;
   color: #f1d90f;
@@ -1024,7 +1024,7 @@ input[type="button"].btn--block {
   white-space: normal;
 }
 .form-legend small {
-  font-size: 16px;
+  font-size: 19.2px;
   font-size: 0.8rem;
   color: #b3b3b3;
 }
@@ -1033,13 +1033,13 @@ input[type="button"].btn--block {
  * Form inputs and groups
  */
 .form-controlGroup {
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 17px;
+  margin-bottom: 17px;
   list-style-type: none;
 }
 
 .form-legend + .form-controlGroup {
-  margin-top: 28px;
+  margin-top: 34px;
   -webkit-margin-top-collapse: separate;
 }
 
@@ -1058,7 +1058,7 @@ input[type="button"].btn--block {
   width: 100%;
   height: 2.5em;
   padding: 0.5em;
-  font-size: 20px;
+  font-size: 24px;
   font-size: 1rem;
   font-family: "bpdotssquareslight", Helvetica, Arial, sans-serif;
   line-height: 1.4;
@@ -1144,7 +1144,7 @@ input[type="button"].btn--block {
 .form-input-file {
   display: inline-block;
   width: 100%;
-  font-size: 20px;
+  font-size: 24px;
   font-size: 1rem;
   margin: 0;
   vertical-align: middle;
@@ -1218,9 +1218,9 @@ input[type="submit"] {
  * Form actions
  */
 .form-actions {
-  padding: 28px 20px;
-  margin-top: 28px;
-  margin-bottom: 28px;
+  padding: 34px 20px;
+  margin-top: 34px;
+  margin-bottom: 34px;
   background-color: #f5f5f5;
   border-top: 1px solid #ddd;
 }
@@ -1287,7 +1287,7 @@ input[type="submit"] {
   color: #b3b3b3;
 }
 
-@media screen and (min-width: 38.4em) {
+@media screen and (min-width: 32em) {
   /**
    * Horizontal-specific styles
    * =================================
@@ -1296,7 +1296,7 @@ input[type="submit"] {
    * Code: https://gist.github.com/mrmartineau/6712577#file-labels-inline-html
    */
   .form--horizontal .form-controlGroup {
-    margin-bottom: 28px;
+    margin-bottom: 34px;
   }
   .form--horizontal .form-controlGroup:after {
     content: "";
@@ -1319,7 +1319,7 @@ input[type="submit"] {
     margin-left: 0;
   }
   .form--horizontal .form-helpBlock {
-    margin-top: 14px;
+    margin-top: 17px;
     margin-bottom: 0;
   }
   .form--horizontal .form-actions {
@@ -1585,7 +1585,7 @@ img, object, embed, video {
   width: 100%;
 }
 
-@media screen and (min-width: 20em) {
+@media screen and (min-width: 16.66666667em) {
   .media-img,
   .media-body {
     display: table-cell;
@@ -1669,7 +1669,7 @@ img, object, embed, video {
   height: auto;
   padding: 10px;
 }
-@media screen and (min-width: 20em) and (max-width: 38.4em) {
+@media screen and (min-width: 16.66666667em) and (max-width: 32em) {
   .l-blockGrid[class*="up--narrow"] > li {
     display: block;
     height: auto;
@@ -1748,7 +1748,7 @@ img, object, embed, video {
     float: left;
   }
 }
-@media screen and (min-width: 38.4em) {
+@media screen and (min-width: 32em) {
   .l-blockGrid > li {
     display: block;
     height: auto;
@@ -1813,7 +1813,7 @@ img, object, embed, video {
 	</ul>
 	========================================================================== */
 .tabs {
-  margin-bottom: 28px;
+  margin-bottom: 34px;
   border-bottom: 2px solid #2ecc71;
 }
 .tabs:after {
@@ -1865,7 +1865,7 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 28px;
+  margin-bottom: 34px;
   border-padding: 0;
   border-spacing: 0;
 }
@@ -1875,8 +1875,8 @@ th {
 .table > tbody > tr > td,
 .table > tfoot > tr > th,
 .table > tfoot > tr > td {
-  padding: 8px;
-  line-height: 28px;
+  padding: 8px 0;
+  line-height: 34px;
   vertical-align: top;
   border-top: 1px solid #666;
 }
@@ -2004,10 +2004,10 @@ table th[class*="col-"] {
  * If you need more responsive tables, consider Tablesaw by the Filament Group:
  * https://github.com/filamentgroup/tablesaw
  */
-@media screen and (max-width: 38.4em) {
+@media screen and (max-width: 32em) {
   .tableResponsive {
     width: 100%;
-    margin-bottom: 21px;
+    margin-bottom: 25.5px;
     overflow-y: hidden;
     overflow-x: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -2060,7 +2060,7 @@ code,
 pre {
   padding: 0 3px 2px;
   font-family: Menlo, Monaco, "Courier New", monospace;
-  font-size: 16px;
+  font-size: 19.2px;
   font-size: 0.8rem;
   color: #444;
   border-radius: 3px;
@@ -2076,8 +2076,8 @@ code {
 
 pre {
   display: block;
-  padding: 14px;
-  margin: 0 0 28px;
+  padding: 17px;
+  margin: 0 0 34px;
   color: #444;
   background-color: #ddd;
   border-radius: 4px;
@@ -2162,6 +2162,14 @@ body {
 
 .page-header-title {
   margin-bottom: 10px;
+}
+
+.trainTimetable {
+  margin-top: 20px;
+}
+.trainTimetable th:nth-last-child(-n+3),
+.trainTimetable td:nth-last-child(-n+3) {
+  text-align: center;
 }
 
 .page-footer {

@@ -30,16 +30,16 @@ var Sockets = {
 		onTimesReceived : function (times) {
 			// log('times received', times);
 
-			var timetable = document.querySelector('.trainTimetable'),
+			var timetable = document.querySelector('.trainTimetable-contents'),
 				tableHTML = '';
 				lastUpdated = document.querySelector('.lastUpdated');
 
 			for (time in times.trainServices) {
 				tableHTML += '<tr>' +
-				'<td>' + times.trainServices[time].std + '</td>' +
-				'<td>' + times.trainServices[time].etd + '</td>' +
+				'<td>' + times.trainServices[time].operator + '</td>' +
 				'<td>' + times.trainServices[time].platform + '</td>' +
-				'<td>' + times.trainServices[time].operator + '</td></tr>';
+				'<td>' + times.trainServices[time].etd + '</td>' +
+				'<td>' + times.trainServices[time].std + '</td></tr>';
 			}
 			timetable.innerHTML = tableHTML;
 
