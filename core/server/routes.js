@@ -12,26 +12,27 @@ var alexaApi = require('core/server/alexaApiController');
 
 module.exports = function (app) {
 
-// ======= HOMEPAGE =========
-	app.get('/', function(req, res) {
+	// ======= HOMEPAGE =========
+	app.get('/', function (req, res) {
 		res.render('index', {
 		});
 	});
 
-	app.post('/api', function(req, res) {
-		res.json(alexaApi.RespondTo(req));
+	app.post('/api', function (req, res) {
+
+		alexaApi.RespondTo(req).then(function (response) { res.json(response) });
 	});
 
-// ======= 500 =========
+	// ======= 500 =========
 	// assume "not found" in the error msgs
 	// is a 404. this is somewhat silly, but
 	// valid, you can do whatever you like, set
 	// properties, use instanceof etc.
-	app.use(function(err, req, res, next){
+	app.use(function (err, req, res, next) {
 		// treat as 404
 		if (err.message
 			&& (~err.message.indexOf('not found')
-			|| (~err.message.indexOf('Cast to ObjectId failed')))) {
+				|| (~err.message.indexOf('Cast to ObjectId failed')))) {
 			return next();
 		}
 
@@ -43,9 +44,9 @@ module.exports = function (app) {
 		res.status(500).render('500', { error: err.stack });
 	});
 
-// ======= 404 =========
+	// ======= 404 =========
 	// assume 404 since no middleware responded
-	app.use(function(req, res, next){
+	app.use(function (req, res, next) {
 		res.status(404).render('404', {
 			url: req.originalUrl,
 			error: 'Not found'
