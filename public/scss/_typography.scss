@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Typography
  * =================================
  * Base
@@ -19,6 +19,28 @@
  *
  */
 
+@font-face {
+    font-family: 'bpdotssquaresregular';
+    src: url('/fonts/BPdotsSquare-webfont.eot');
+    src: url('/fonts/BPdotsSquare-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/BPdotsSquare-webfont.woff') format('woff'),
+         url('/fonts/BPdotsSquare-webfont.ttf') format('truetype'),
+         url('/fonts/BPdotsSquare-webfont.svg#bpdotssquaresregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bpdotssquareslight';
+    src: url('/fonts/BPdotsSquareLight-webfont.eot');
+    src: url('/fonts/BPdotsSquareLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/BPdotsSquareLight-webfont.woff') format('woff'),
+         url('/fonts/BPdotsSquareLight-webfont.ttf') format('truetype'),
+         url('/fonts/BPdotsSquareLight-webfont.svg#bpdotssquareslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
 	font-size: $font-size-base-narrow-px;
 	text-size-adjust: 100%;
@@ -33,6 +55,7 @@ body {
 	@include font-size($type-base);
 	line-height: $leading-base;
 	color: $color-text;
+	text-transform: uppercase;
 
 	// Add ligatures
 	font-feature-settings: "liga","dlig";
@@ -86,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
 // For example: h3.h1 or h3.alpha
 h1, .h1, .alpha {
 	@include font-size($type-largest);
-	margin-top: 0;
+	margin-top: $baseline;
 	margin-bottom: $baseline * 2;
 }
 

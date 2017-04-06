@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Variables
  * =================================
  * Typography
@@ -42,7 +42,7 @@ $type-jumbo                    : modular-scale($font-size-base,  4, $type-scale)
 $font-weight-bold             : bold;
 
 /* Font stacks */
-$font-family-sans             : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans             : "bpdotssquareslight", Helvetica, Arial, sans-serif;
 $font-family-serif            : Georgia, "Times New Roman", Times, serif;
 $font-family-mono             : Menlo, Monaco, "Courier New", monospace;
 
@@ -50,7 +50,7 @@ $font-family-base             : $font-family-sans;
 $font-family-alt              : $font-family-serif;
 
 $font-family-headings         : inherit; // using inherit will use $font-family-base for all headings
-$font-weight-headings         : bold;    // instead of browser default, bold
+$font-weight-headings         : normal;    // instead of browser default, bold
 $line-height-headings         : 1.1;
 
 
@@ -83,9 +83,9 @@ $img-path                     : "/img"; // Usage: background: url('#{$img-path}/
  */
 
 // Setup grid defaults
-$layout-margin                : 0     !default; // [in pixels] Space outside the grid
-$layout-max-width               : 1000  !default; // [in pixels]
-$layout-min-width               : 1000  !default; // [in pixels] Minimum width for layout in <IE9
+$layout-margin                : 20     !default; // [in pixels] Space outside the grid
+$layout-max-width             : 1000  !default; // [in pixels]
+$layout-min-width             : 1000  !default; // [in pixels] Minimum width for layout in <IE9
 
 $grid-column-count            : 12    !default; // Total column count
 $grid-gutter-width            : 20    !default; // [in pixels]

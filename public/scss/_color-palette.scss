@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Colour palette (yeah we're British!)
  */
 
@@ -18,9 +18,9 @@ $color-secondary              : $red;
 $color-highlight              : $yellow;
 
 // Common colours
-$color-text                   : #444;
-$color-bg                     : #f1f1f1;
-$color-border                 : #ddd;
+$color-text                   : #f1d90f;
+$color-bg                     : #333;
+$color-border                 : #f1d90f;
 
 // Text Selection
 $color-selection              : #fff;
@@ -84,8 +84,8 @@ $table-bg                     : $color-bg !default; // Default background color 
 $table-bg-accent              : #f9f9f9 !default; // Background color used for `.table-striped`.
 $table-bg-hover               : #f5f5f5 !default; // Background color used for `.table-hover`.
 $table-bg-active              : $table-bg-hover !default;
-$table-border                 : #ddd; // table and cell border
-$table-border-color           : #ddd !default; // Border color for table and cell borders.
+$table-border                 : #666; // table and cell border
+$table-border-color           : #666 !default; // Border color for table and cell borders.
 
 // <hr> border colour
 $hr-border                    : lighten(#000, 70%);

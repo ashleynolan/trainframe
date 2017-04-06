@@ -24,6 +24,7 @@ var server = {
 
 		app.use('/css', express.static('public/css'));
 		app.use('/js', express.static('public/js'));
+		app.use('/fonts', express.static('public/fonts'));
 
 		app.set('views', 'core/client/views');
 		app.set('view engine', 'jade');
