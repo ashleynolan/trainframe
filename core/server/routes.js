@@ -19,7 +19,7 @@ module.exports = function (app) {
 	});
 
 	app.post('/api', function(req, res) {
-		res.json(alexaApi.RespondTo());
+		res.json(alexaApi.RespondTo(req));
 	});
 
 // ======= 500 =========

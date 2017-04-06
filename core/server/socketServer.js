@@ -19,7 +19,7 @@ var SocketServer = {
 			console.log('trainframe.js: New connection logged');
 
 			//needs to emit a state from our twitter controller
-			fatController.getTimes(socket);
+			fatController.emitScreenTimes(socket);
 		});
 
 
