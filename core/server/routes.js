@@ -4,7 +4,7 @@
  */
 
 var async = require('async');
-
+var alexaApi = require('core/server/alexaApiController');
 
 /**
  * Expose routes
@@ -16,6 +16,10 @@ module.exports = function (app) {
 	app.get('/', function(req, res) {
 		res.render('index', {
 		});
+	});
+
+	app.get('/api', function(req, res) {
+		res.json(alexaApi.RespondTo());
 	});
 
 // ======= 500 =========
