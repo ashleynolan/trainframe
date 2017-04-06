@@ -33,13 +33,26 @@ var TrainApiController = {
 	getTimes: function (from, to) {
 
 		console.log(from, to);
-		TrainApiController.railApi.getDepartureBoardWithDetails(from, { filter: to }, function (err, result) {
+		TrainApiController.railApi.getDepartureBoardWithDetails(TrainApiController.getStationCode(from), { filter: TrainApiController.getStationCode(to) }, function (err, result) {
 			return TrainApiController.firstTime(result)
 		});
 	},
 
 	firstTime: function(result) {
 		return result.trainServices[0].std;
+	},
+
+	getStationCode: function(station) {
+		switch (station) {
+			case 'bristol temple meads':
+			case 'temple meads':
+				return 'BRI';
+			case 'severn tunnel junction':
+			case 'severn tunnel':
+				return 'STJ';
+			case 'newport':
+				return 'NWP';	
+		}
 	}
 };
 
